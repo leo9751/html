@@ -1,0 +1,211 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css); 
+
+.hidden {
+    visibility: hidden;
+    display: none;
+}
+/*모바일*/
+@media screen and (max-width: 768px) {
+
+    /*header*/
+    #wrap {
+        padding:0;
+        font-family: 'Noto Sans KR', sans-serif;
+        background: url(../img/img_bg.png) repeat-x top left;
+    }
+    .header {
+        padding: 5% 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 10px;
+        width: 100%;
+        z-index: 100;
+        display: none;
+        border: 1px solid green;
+    }
+
+    /*컨텐츠영역*/
+    .contents {
+        position:absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 500px;
+        z-index: 0;
+    }
+    .night {
+        margin: 0 auto;
+
+    }
+
+    .night .time_check {
+        color: #fff;
+        font-size: 1.3em;
+        padding-top: 20%;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .night .img {
+        border-radius: 100px;
+        background: #252872 url(../img/img_night.png) no-repeat 10px 5px;
+        background-size: 90%;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        box-shadow: 0px 0px 10px #252872;
+    }
+    .night p{
+        padding: 10% 0;
+    }
+
+    .night dl {
+        width: 80%; 
+        margin: 0 auto;
+        padding: 10% 0;
+    }
+    .night dl dt {
+        background: #252872;
+        border-radius: 30px;
+        color: #fff;
+        display: inline;
+        padding: 1% 5% 2% 5%;
+        margin: 5% 0;
+        font-size: .8em;
+    }
+    .night dl dd {
+        display: block;
+        width:100%;
+        padding: 3% 0;
+        margin-top: 10%;
+        text-align: center;
+    }
+    .night .total_time dd {
+        background: #786eda;
+        border-radius: 30px;
+        display: block;
+        color: #fff;
+        width: 100%;
+        font-size: 1.3em;
+        line-height: 150%;
+        padding-bottom: 3%;
+    }
+    .night .graph dd {
+        background:#fff;
+        border-radius: 10px;
+        height: 200px;
+        background-color: rgba( 255, 255, 255, 0.5 );
+    }
+    .night .graph img {
+        width: 100%;
+    }
+}
+/*태블릿*/
+@media screen and (min-width: 769px) { 
+    /*header*/
+    #wrap {
+        padding:0;
+        font-family: 'Noto Sans KR', sans-serif;
+        background: url(../img/img_bg.png) repeat-x top left;
+    }
+    .header {
+        padding: 5% 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 10px;
+        width: 100%;
+        z-index: 100;
+        display: none;
+        border: 1px solid green;
+    }
+
+    /*컨텐츠영역*/
+    .contents {
+        position:absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 500px;
+        z-index: 0;
+    }
+    .night {
+        margin: 0 auto;
+    }
+    .night .time_check {
+        color: #fff;
+        font-size: 2em;
+        padding-top: 15%;
+        text-align: center;
+        width: 50%;
+        height: 100%;
+        margin: 0 auto;
+        float: left;
+    }
+    .night .time_check ul {
+        font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell, "Helvetica Neue", "sans-serif";
+    }
+    .night .img {
+        border-radius: 150px;
+        background: #252872 url(../img/img_night.png) no-repeat 10px 5px;
+        background-size: 90%;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        box-shadow: 0px 0px 10px #252872;
+    }
+    .night p{
+        padding: 5% 0 0 0;
+    }
+
+    /*timer*/
+    .night dl {
+        width: 35%;
+        margin-right: 15%;
+        display: inline-block;
+        float: right;
+    }
+    .night .total_time {
+        position: absolute;
+        top: 15%;
+    }
+    .night .graph {
+        position: absolute;
+        top:40%;
+        right: 0;
+    }
+    .night dl dt {
+        background: #252872;
+        border-radius: 30px;
+        box-shadow: 0 0 16px 3px rgba(0 0 0 / 15%);
+        box-shadow: ;
+        color: #fff;
+        display: inline-block;
+        padding: 1% 3% 2% 3%;
+        margin: 5% 0;
+        font-size: 1em;
+    }
+    .night dl dd {
+        display: block;
+        width:100%;
+        padding: 3% 0;
+        text-align: center;
+    }
+    .night .total_time dd {
+        background: #786eda;
+        border-radius: 30px;
+        display: block;
+        color: #fff;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .night .graph dd {
+        background:#fff;
+        border-radius: 10px;
+        background-color: rgba( 255, 255, 255, 0.5 );
+    }
+    .night .graph img {
+        width: 100%;
+    }
+}
