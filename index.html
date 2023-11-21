@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>굿나잇</title>
+
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script> 
+        var userAgent = navigator.userAgent.toLowerCase(); // 접속 핸드폰 정보 
+           
+        // 모바일 홈페이지 바로가기 링크 생성 
+        if(userAgent.match('iphone')) { 
+            document.write('<link rel="apple-touch-icon" href="./img/icon_icon.png" />') 
+        } else if(userAgent.match('ipad')) { 
+            document.write('<link rel="apple-touch-icon" sizes="72*72" href="./img/icon_icon.png" />') 
+        } else if(userAgent.match('ipod')) { 
+            document.write('<link rel="apple-touch-icon" href="./img/icon_icon.png" />') 
+        } else if(userAgent.match('android')) { 
+            document.write('<link rel="shortcut icon" href="./img/icon_icon.png" />') 
+        } 
+    </script>
+    
+</head>
+<body id="wrap">
+    <div class="contents night">
+        <div class="time_check">
+            <div class="img"></div>
+            <p>수면시간 : 
+                <label id="hours">00</label>
+                <label id="colon">:</label>
+                <label id="minutes">00</label>
+                <label id="colon">:</label>
+                <label id="seconds">00</label>
+            </p>
+        </div>
+        <dl class="total_time">
+            <dt>오늘 총수면</dt>
+            <dd>8:12:44</dd>
+        </dl>
+        <dl class="graph">
+            <dt>이번주 수면 그래프</dt>
+            <dd>
+                <img src="./img/img_graph.png"/>
+            </dd>
+        </dl>
+    </div>
+    <script type="text/javascript">
+        var hoursLabel = document.getElementById("hours");
+        var minutesLabel = document.getElementById("minutes");
+        var secondsLabel = document.getElementById("seconds");
+        var totalSeconds = 0;
+        setInterval(setTime, 1000);
+
+        function setTime()
+        {
+            ++totalSeconds;
+            secondsLabel.innerHTML = pad(totalSeconds%60);
+            minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
+            hoursLabel.innerHTML = pad(parseInt(totalMinutes/60));
+        }
+
+        function pad(val)
+        {
+            var valString = val + "";
+            if(valString.length < 2)
+            {
+                return "0" + valString;
+            }
+            else
+            {
+                return valString;
+            }
+        }
+    </script>
+</body>
+
+</html>
